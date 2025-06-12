@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="css/pico.red.min.css">
     <nav>
         <ul>
-            <li><a href="index.html"><img src="images/house.svg" width="50px" height="50px"></a></li>
+            <li><img src="images/house.svg" width="50px" height="50px" onclick="loadFrame('search.html')"></li>
         </ul>
         <ul>
-            <li><button onclick="loadFrame('register.html')" onload="onLoadFrame()">Criar conta</button></li>
-            <li><button onclick="loadFrame('login.html')" onload="onLoadFrame()">Acessar conta</button></li>
+            <li><button onclick="loadFrame('register.html')">Criar conta</button></li>
+            <li><button onclick="loadFrame('login.html')">Acessar conta</button></li>
         </ul>
     </nav>
 
-    <main><iframe id="mainFrame" width="100%"></iframe></main>
+    <main><iframe id="mainFrame" width="100%" src="search.html"></iframe></main>
 
     <footer class="grid">
         <div>

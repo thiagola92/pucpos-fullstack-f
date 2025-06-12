@@ -1,9 +1,3 @@
-// Não estamos hosteando um server, isso quer dizer que não podemos
-// utilizar funções como fetch() para pegar conteúdo de outras páginas
-// para atualizar nossa <iframe>.
-//
-// O que fazemos aqui? Deduzimos o caminho do arquivo HTML a ser
-// carregado na nossa <iframe> e atualizamos a referência dela.
 const PROJECT_DIR = "/src/"
 const PATHNAME = window.location.pathname
 
@@ -14,6 +8,11 @@ function loadFrame(path) {
 
     let parts = PATHNAME.split(PROJECT_DIR)
     mainFrame.src = [parts[0], path].join(PROJECT_DIR)
+
+    onFrameChanged()
+}
+
+function onFrameChanged() {
     mainFrame.height = 0
 
     setTimeout(resizeFrame, 250)
@@ -41,3 +40,5 @@ function getCookie(name) {
 
     return null
 }
+
+window.onresize = onFrameChanged
