@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/pico/pico.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body class="container-fluid">
+    <link rel="stylesheet" href="css/pico.red.min.css">
+    <nav>
+        <ul>
+            <li><a href="index.html"><img src="images/house.svg" width="50px" height="50px"></a></li>
+        </ul>
+        <ul>
+            <li><button onclick="loadFrame('register.html')" onload="onLoadFrame()">Criar conta</button></li>
+            <li><button onclick="loadFrame('login.html')" onload="onLoadFrame()">Acessar conta</button></li>
+        </ul>
+    </nav>
+
+    <main><iframe id="mainFrame" width="100%"></iframe></main>
+
+    <footer class="grid">
+        <div>
+            <p>Links</p>
+            <ul>
+                <li><a href="">Sobre nós</a></li>
+                <li><a href="">Suporte</a></li>
+            </ul>
+        </div>
+        <div style="text-align: right;">
+            <p>Redes Sociais</p>
+            <a href=""><img src="images/social_media/youtube.png" width="24px" height="24px"></img></a>
+            <a href=""><img src="images/social_media/instagram.png" width="24px" height="24px"></img></a>
+            <a href=""><img src="images/social_media/facebook.png" width="24px" height="24px"></img></a>
+            <a href=""><img src="images/social_media/twitter.png" width="24px" height="24px"></img></a>
+        </div>
+    </footer>
+</body>
