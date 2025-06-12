@@ -4,7 +4,7 @@
 //
 // O que fazemos aqui? Deduzimos o caminho do arquivo HTML a ser
 // carregado na nossa <iframe> e atualizamos a referência dela.
-const PROJECT_DIR = "/pucpos-fullstack-f/src/"
+const PROJECT_DIR = "/src/"
 const PATHNAME = window.location.pathname
 
 function loadFrame(path) {
