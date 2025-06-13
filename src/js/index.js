@@ -1,19 +1,17 @@
-const PROJECT_DIR = "/src/"
 const PATHNAME = window.location.pathname
 
 function loadFrame(path) {
     if (window.location.protocol != "file:") {
-        return console.error("Este website foi feito uso local apenas.")
+        return console.error("Este website foi feito para uso local apenas.")
     }
 
-    let parts = PATHNAME.split(PROJECT_DIR)
-    mainFrame.src = [parts[0], path].join(PROJECT_DIR)
+    indexFrame.src = PATHNAME.replace("/src/index.html", `/src/${path}`)
 
     onFrameChanged()
 }
 
 function onFrameChanged() {
-    mainFrame.height = 0
+    indexFrame.height = 0
 
     setTimeout(resizeFrame, 250)
 }
@@ -26,7 +24,7 @@ function resizeFrame() {
         return
     }
 
-    mainFrame.height = parseInt(getCookie("frameHeight"))
+    indexFrame.height = parseInt(getCookie("frameHeight"))
 }
 
 function getCookie(name) {
@@ -41,4 +39,10 @@ function getCookie(name) {
     return null
 }
 
-window.onresize = onFrameChanged
+window.onresize = () => {
+    onFrameChanged()
+}
+
+window.onload = () => {
+    indexFrame.onload = onFrameChanged
+}

@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="css/pico/pico.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
 </head>
 
 <body class="container-fluid">
@@ -13,12 +13,13 @@
             <li><img src="images/house.svg" width="50px" height="50px" onclick="loadFrame('search.html')"></li>
         </ul>
         <ul>
-            <li><button onclick="loadFrame('register.html')">Criar conta</button></li>
-            <li><button onclick="loadFrame('login.html')">Acessar conta</button></li>
+            <li><button id="logoutButton" onclick="loadFrame('logout.html')" hidden>Sair da Conta</button></li>
+            <li><button id="registerButton" onclick="loadFrame('register.html')">Criar conta</button></li>
+            <li><button id="loginButton" onclick="loadFrame('login.html')">Acessar conta</button></li>
         </ul>
     </nav>
 
-    <main><iframe id="mainFrame" width="100%" src="search.html"></iframe></main>
+    <main><iframe id="indexFrame" width="100%" src="search.html"></iframe></main>
 
     <footer class="grid">
         <div>
