@@ -27,6 +27,6 @@ section>.card {
 }
 
 section>div>img {
-    max-width: 250px;
-    max-height: 250px;
+    width: 500px;
+    max-height: 350px;
 }
