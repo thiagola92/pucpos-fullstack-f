@@ -7,11 +7,11 @@ ul {
     max-height: 400px;
 }
 
-footer>.socialMedia {
+.socialMedia {
     text-align: right;
 }
 
-footer>.socialMedia>a>img {
-    width: 24px;
-    height: 24px;
+.socialMedia>a>img {
+    width: 40px;
+    height: 40px;
 }
