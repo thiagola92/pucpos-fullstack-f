@@ -1,0 +1,32 @@
+.searchForm {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.searchForm>details {
+    padding-right: 10px;
+}
+
+.searchForm>.search {
+    max-width: 600px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section>.card {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    /* Talvez remova a sombra*/
+    box-shadow: 1px 1px 3px var(--pico-primary);
+}
+
+section>div>img {
+    max-width: 250px;
+    max-height: 250px;
+}

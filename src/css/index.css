@@ -1,0 +1,17 @@
+iframe {
+    width: 100%;
+}
+
+ul {
+    overflow: scroll;
+    max-height: 400px;
+}
+
+footer>.socialMedia {
+    text-align: right;
+}
+
+footer>.socialMedia>a>img {
+    width: 24px;
+    height: 24px;
+}

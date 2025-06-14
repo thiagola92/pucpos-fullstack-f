@@ -1,60 +1,599 @@
 <head>
     <link rel="stylesheet" href="css/pico/pico.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search.css">
 
     <script src="js/iframe.js">notifySize()</script>
 </head>
 
-<form class="grid">
-    <details class="dropdown">
-        <summary>Plano</summary>
-        <ul>
-            <li><label><input type="checkbox" checked />Comprar</label></li>
-            <li><label><input type="checkbox" checked />Alugar</label></li>
-        </ul>
-    </details>
-    <details class="dropdown">
-        <summary>Imóvel</summary>
-        <ul>
-            <li><label><input type="checkbox" />Casa</label></li>
-            <li><label><input type="checkbox" />Apartamento</label></li>
-        </ul>
-    </details>
-    <details class="dropdown">
-        <summary>Estado</summary>
-        <ul>
-            <li><label><input type="checkbox" />AC</label></li>
-            <li><label><input type="checkbox" />AL</label></li>
-            <li><label><input type="checkbox" />AP</label></li>
-            <li><label><input type="checkbox" />AM</label></li>
-            <li><label><input type="checkbox" />BA</label></li>
-            <li><label><input type="checkbox" />CE</label></li>
-            <li><label><input type="checkbox" />DF</label></li>
-            <li><label><input type="checkbox" />ES</label></li>
-            <li><label><input type="checkbox" />GO</label></li>
-            <li><label><input type="checkbox" />MA</label></li>
-            <li><label><input type="checkbox" />MT</label></li>
-            <li><label><input type="checkbox" />MS</label></li>
-            <li><label><input type="checkbox" />MG</label></li>
-            <li><label><input type="checkbox" />PA</label></li>
-            <li><label><input type="checkbox" />PB</label></li>
-            <li><label><input type="checkbox" />PR</label></li>
-            <li><label><input type="checkbox" />PE</label></li>
-            <li><label><input type="checkbox" />PI</label></li>
-            <li><label><input type="checkbox" />RJ</label></li>
-            <li><label><input type="checkbox" />RN</label></li>
-            <li><label><input type="checkbox" />RS</label></li>
-            <li><label><input type="checkbox" />RO</label></li>
-            <li><label><input type="checkbox" />RR</label></li>
-            <li><label><input type="checkbox" />SC</label></li>
-            <li><label><input type="checkbox" />SP</label></li>
-            <li><label><input type="checkbox" />SE</label></li>
-            <li><label><input type="checkbox" />TO</label></li>
-        </ul>
-    </details>
-    <details class="dropdown">
-        <summary>Cidade</summary>
-        <ul style="overflow: scroll; max-height: 400px;">
-        </ul>
-    </details>
-</form>
+<body>
+    <form class="searchForm">
+        <details class="dropdown">
+            <summary>Plano</summary>
+            <ul>
+                <li><label><input type="checkbox" checked />Comprar</label></li>
+                <li><label><input type="checkbox" checked />Alugar</label></li>
+            </ul>
+        </details>
+        <details class="dropdown">
+            <summary>Imóvel</summary>
+            <ul>
+                <li><label><input type="checkbox" checked />Casa</label></li>
+                <li><label><input type="checkbox" checked />Apartamento</label></li>
+            </ul>
+        </details>
+        <div role="search" class="search">
+            <input name="search" type="search" placeholder="Search" />
+            <input type="submit" value="Search" />
+        </div>
+    </form>
+
+    <section>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/houses.svg" />
+            <div>
+                R$ 1.000.000<br>
+                Cond. R$ 1.000<br>
+                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </div>
+    </section>
+</body>

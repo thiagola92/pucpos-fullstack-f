@@ -2,7 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="css/pico/pico.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
 </head>
 
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/pico.red.min.css">
     <nav>
         <ul>
-            <li><img src="images/house.svg" width="50px" height="50px" onclick="loadFrame('search.html')"></li>
+            <li><img src="images/logo.svg" width="50px" height="50px" onclick="loadFrame('search.html')"></li>
         </ul>
         <ul>
             <li><button id="logoutButton" onclick="loadFrame('logout.html')" hidden>Sair da Conta</button></li>
@@ -19,7 +19,7 @@
         </ul>
     </nav>
 
-    <main><iframe id="indexFrame" width="100%" src="search.html"></iframe></main>
+    <main><iframe id="indexFrame" src="search.html"></iframe></main>
 
     <footer class="grid">
         <div>
@@ -29,12 +29,13 @@
                 <li><a href="">Suporte</a></li>
             </ul>
         </div>
-        <div style="text-align: right;">
+        <div class="socialMedia">
             <p>Redes Sociais</p>
-            <a href=""><img src="images/social_media/youtube.png" width="24px" height="24px"></img></a>
-            <a href=""><img src="images/social_media/instagram.png" width="24px" height="24px"></img></a>
-            <a href=""><img src="images/social_media/facebook.png" width="24px" height="24px"></img></a>
-            <a href=""><img src="images/social_media/twitter.png" width="24px" height="24px"></img></a>
+            <a href=""><img src="images/social_media/youtube.png" /></a>
+            <a href=""><img src="images/social_media/instagram.png" /></a>
+            <a href=""><img src="images/social_media/facebook.png" /></a>
+            <a href=""><img src="images/social_media/twitter.svg" /></a>
         </div>
     </footer>
+
 </body>

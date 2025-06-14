@@ -45,4 +45,5 @@ window.onresize = () => {
 
 window.onload = () => {
     indexFrame.onload = onFrameChanged
+    onFrameChanged()
 }
