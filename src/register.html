@@ -1,33 +1,33 @@
 <head>
     <link rel="stylesheet" href="css/pico/pico.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
 
     <script src="js/iframe.js">notifySize()</script>
+    <script src="js/register.js"></script>
 </head>
 
-<form class="container" style="max-width: 500px;">
+<form id="registration" class="container">
     <label>
         Nome completo
-        <input type="text">
+        <input type="text" id="nameField">
     </label>
     <div class="grid">
         <label>
             CPF
-            <input type="text">
+            <input type="text" id="cpfField">
         </label>
         <label>
             Telefone
-            <input type="tel">
+            <input type="tel" id="phoneField">
         </label>
     </div>
     <label>
         E-mail
-        <input type="email">
-        <small>Pode botar qualquer texto, não estamos validando e-mail 🤣</small>
+        <input type="email" id="emailField">
     </label>
     <label>
         Senha
-        <input type="password">
+        <input type="password" id="passwordField">
     </label>
     <label>
         Confirme a senha
@@ -37,5 +37,5 @@
         <input type="checkbox" role="switch">
         Eu li e concordo com os termos de uso
     </label>
-    <button class="container-fluid" disabled>Registar</button>
+    <button class="container-fluid">Registar</button>
 </form>

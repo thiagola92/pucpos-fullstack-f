@@ -1,4 +1,5 @@
 const PATHNAME = window.location.pathname
+let waitingFrame = false
 
 function loadFrame(path) {
     if (window.location.protocol != "file:") {
@@ -6,25 +7,51 @@ function loadFrame(path) {
     }
 
     indexFrame.src = PATHNAME.replace("/src/index.html", `/src/${path}`)
-
+    
     onFrameChanged()
 }
 
 function onFrameChanged() {
     indexFrame.height = 0
+    waitingFrame = true
 
     setTimeout(resizeFrame, 250)
 }
 
-function resizeFrame() {
-    var frameHeight = getCookie("frameHeight")
+function onFrameMessage(event) {
+    let parts = event.data.split("=")
 
-    if (frameHeight == null) {
-        setTimeout(resizeFrame, 100)
+    if (parts.length != 2) {
         return
     }
 
-    indexFrame.height = parseInt(getCookie("frameHeight"))
+    if (parts[0] != "frameHeight") {
+        return
+    }
+
+    console.log("Here")
+    console.log(event.data)
+
+    resizeFrame(parts[1])
+}
+
+function resizeFrame(frameHeight = null) {
+    if (!waitingFrame) {
+        return
+    }
+
+    // Firefox solution.
+    if (frameHeight == null) {
+        frameHeight = getCookie("frameHeight")
+
+        if (frameHeight == null) {
+            setTimeout(resizeFrame, 100)
+            return
+        }
+    }
+
+    waitingFrame = false
+    indexFrame.height = parseInt(frameHeight)
 }
 
 function getCookie(name) {
@@ -47,3 +74,5 @@ window.onload = () => {
     indexFrame.onload = onFrameChanged
     onFrameChanged()
 }
+
+window.addEventListener("message", onFrameMessage)
