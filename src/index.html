@@ -10,12 +10,22 @@
     <link rel="stylesheet" href="css/pico.red.min.css">
     <nav>
         <ul>
-            <li><img src="images/index/logo.svg" width="50px" height="50px" onclick="loadFrame('search.html')"></li>
+            <li><img class="logo" src="images/index/logo.svg" width="50px" height="50px"
+                    onclick="loadFrame('search.html')"></li>
         </ul>
         <ul>
-            <li><button id="logoutButton" onclick="loadFrame('logout.html')" hidden>Sair da Conta</button></li>
-            <li><button id="registerButton" onclick="loadFrame('register.html')">Criar conta</button></li>
-            <li><button id="loginButton" onclick="loadFrame('login.html')">Acessar conta</button></li>
+            <li hidden>
+                <button id="addButton" onclick="loadFrame('add.html')"><img src="images/index/add.svg" /></button>
+            </li>
+            <li hidden>
+                <button id="logoutButton" onclick="loadFrame('logout.html')">Sair da Conta</button>
+            </li>
+            <li>
+                <button id="registerButton" onclick="loadFrame('register.html')">Criar conta</button>
+            </li>
+            <li>
+                <button id="loginButton" onclick="loadFrame('login.html')">Acessar conta</button>
+            </li>
         </ul>
     </nav>
 

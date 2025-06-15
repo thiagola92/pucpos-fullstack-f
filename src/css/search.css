@@ -18,15 +18,16 @@ section {
     justify-content: center;
 }
 
-section>.card {
-    display: flex;
-    flex-direction: column;
-    margin: 25px;
-    /* Talvez remova a sombra*/
-    box-shadow: 1px 1px 3px var(--pico-primary);
-}
-
-section>div>img {
+.cardImage {
     width: 500px;
     max-height: 350px;
+}
+
+article {
+    margin: 25px;
+    border-radius: 25px;
+}
+
+.cardText {
+    margin: 12px;
 }
