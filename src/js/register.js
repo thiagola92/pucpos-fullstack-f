@@ -20,6 +20,10 @@ async function onSubmit(e) {
     window.location.href = "./search.html"
 }
 
+let previousOnload = window.onload
+
 window.onload = () => {
+    previousOnload()
+    
     registration.addEventListener("submit", onSubmit)
 }

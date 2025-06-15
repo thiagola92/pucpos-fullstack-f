@@ -1,9 +1,7 @@
 function requestResize() {
-    // Firefox solution.
-    document.cookie = `frameHeight=${document.body.scrollHeight}`
-
-    // Chrome solution.
-    window.parent.postMessage(`frameHeight=${document.body.scrollHeight}`, "*")
+    setTimeout(() => {
+        window.parent.postMessage(`frameHeight=${document.body.scrollHeight}`, "*")
+    }, 100)
 }
 
 window.onload = requestResize

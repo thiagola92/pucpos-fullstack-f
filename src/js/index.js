@@ -1,24 +1,19 @@
 const PATHNAME = window.location.pathname
-let waitingFrame = false
 
 function loadFrame(path) {
     if (window.location.protocol != "file:") {
         return console.error("Este website foi feito para uso local apenas.")
     }
 
-    indexFrame.src = PATHNAME.replace("/src/index.html", `/src/${path}`)
-    
-    onFrameChanged()
-}
-
-function onFrameChanged() {
     indexFrame.height = 0
-    waitingFrame = true
-
-    setTimeout(resizeFrame, 250)
+    indexFrame.src = PATHNAME.replace("/src/index.html", `/src/${path}`)
 }
 
 function onFrameMessage(event) {
+    if (typeof event.data != "string") {
+        return
+    }
+
     let parts = event.data.split("=")
 
     if (parts.length != 2) {
@@ -29,50 +24,10 @@ function onFrameMessage(event) {
         return
     }
 
-    console.log("Here")
-    console.log(event.data)
 
-    resizeFrame(parts[1])
-}
-
-function resizeFrame(frameHeight = null) {
-    if (!waitingFrame) {
-        return
-    }
-
-    // Firefox solution.
-    if (frameHeight == null) {
-        frameHeight = getCookie("frameHeight")
-
-        if (frameHeight == null) {
-            setTimeout(resizeFrame, 100)
-            return
-        }
-    }
-
-    waitingFrame = false
-    indexFrame.height = parseInt(frameHeight)
-}
-
-function getCookie(name) {
-    for (let c of document.cookie.split('; ')) {
-        let [n, v] = c.split("=", 2)
-
-        if (name == n) {
-            return v
-        }
-    }
-
-    return null
-}
-
-window.onresize = () => {
-    onFrameChanged()
-}
-
-window.onload = () => {
-    indexFrame.onload = onFrameChanged
-    onFrameChanged()
+    console.log(parts[1])
+    
+    indexFrame.height = parseInt(parts[1])
 }
 
 window.addEventListener("message", onFrameMessage)
