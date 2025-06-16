@@ -49,6 +49,12 @@ function onWindowLoad() {
     updateTopBar()
 }
 
+function onLogoutClicked() {
+    sessionStorage.removeItem("token")
+    updateTopBar()
+    loadFrame("search.html")
+}
+
 window.addEventListener("message", onFrameMessage)
 
 window.onload = onWindowLoad
