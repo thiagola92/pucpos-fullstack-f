@@ -8,3 +8,4 @@ O repositório do **backend** se encontra em: https://github.com/thiagola92/pucp
 - https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 - https://developer.mozilla.org/en-US/docs/Web/API/Window#messaging_events
 - https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event
+- https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage

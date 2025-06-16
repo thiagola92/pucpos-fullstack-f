@@ -9,6 +9,22 @@ function loadFrame(path) {
     indexFrame.src = PATHNAME.replace("/src/index.html", `/src/${path}`)
 }
 
+function updateTopBar() {
+    let token = sessionStorage.getItem("token")
+
+    if (token == null || token.length == 0) {
+        addButton.hidden = true
+        logoutButton.hidden = true
+        registerButton.hidden = false
+        loginButton.hidden = false
+    } else {
+        addButton.hidden = false
+        logoutButton.hidden = false
+        registerButton.hidden = true
+        loginButton.hidden = true
+    }
+}
+
 function onFrameMessage(event) {
     if (typeof event.data != "string") {
         return
@@ -20,14 +36,19 @@ function onFrameMessage(event) {
         return
     }
 
-    if (parts[0] != "frameHeight") {
-        return
+    if (parts[0] == "frameHeight") {
+        indexFrame.height = parseInt(parts[1])
+    } else if (parts[0] == "login") {
+        sessionStorage.setItem("token", parts[1])
+        updateTopBar()
     }
 
+}
 
-    console.log(parts[1])
-    
-    indexFrame.height = parseInt(parts[1])
+function onWindowLoad() {
+    updateTopBar()
 }
 
 window.addEventListener("message", onFrameMessage)
+
+window.onload = onWindowLoad
