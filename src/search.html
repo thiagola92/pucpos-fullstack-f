@@ -3,10 +3,11 @@
     <link rel="stylesheet" href="css/search.css">
 
     <script src="js/iframe.js">notifySize()</script>
+    <script src="js/search.js"></script>
 </head>
 
 <body>
-    <form class="searchForm">
+    <form id="searchForm">
         <details class="dropdown">
             <summary>Plano</summary>
             <ul>
@@ -22,19 +23,29 @@
             </ul>
         </details>
         <div role="search" class="search">
-            <input name="search" type="search" placeholder="Search" />
+            <input id="searchField" type="search" placeholder="Search" />
             <input type="submit" value="Search" />
         </div>
     </form>
 
-    <section>
+    <!-- Template to be used below. -->
+    <template id="propertyTemplate">
         <article>
             <img class="cardImage" src="images/search/template_house_0.svg" />
             <hr>
             <div class="cardText">
                 R$ 1.000.000<br>
-                Cond. R$ 1.000<br>
-                IPTU R$ 1.000<br>
+                300m²<br>
+            </div>
+        </article>
+    </template>
+
+    <section id="propertiesList">
+        <article>
+            <img class="cardImage" src="images/search/template_house_0.svg" />
+            <hr>
+            <div class="cardText">
+                R$ 1.000.000<br>
                 300m²<br>
             </div>
         </article>
@@ -43,8 +54,6 @@
             <hr>
             <div class="cardText">
                 R$ 1.000.000<br>
-                Cond. R$ 1.000<br>
-                IPTU R$ 1.000<br>
                 300m²<br>
             </div>
         </article>
@@ -53,8 +62,6 @@
             <hr>
             <div class="cardText">
                 R$ 1.000.000<br>
-                Cond. R$ 1.000<br>
-                IPTU R$ 1.000<br>
                 300m²<br>
             </div>
         </article>
@@ -63,8 +70,6 @@
             <hr>
             <div class="cardText">
                 R$ 1.000.000<br>
-                Cond. R$ 1.000<br>
-                IPTU R$ 1.000<br>
                 300m²<br>
             </div>
         </article>
@@ -73,8 +78,6 @@
             <hr>
             <div class="cardText">
                 R$ 1.000.000<br>
-                Cond. R$ 1.000<br>
-                IPTU R$ 1.000<br>
                 300m²<br>
             </div>
         </article>
@@ -83,8 +86,6 @@
             <hr>
             <div class="cardText">
                 R$ 1.000.000<br>
-                Cond. R$ 1.000<br>
-                IPTU R$ 1.000<br>
                 300m²<br>
             </div>
         </article>

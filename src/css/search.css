@@ -1,14 +1,14 @@
-.searchForm {
+#searchForm {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.searchForm>details {
+#searchForm>details {
     padding-right: 10px;
 }
 
-.searchForm>.search {
+#searchForm>.search {
     max-width: 600px;
 }
 
