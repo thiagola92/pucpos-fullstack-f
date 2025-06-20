@@ -11,3 +11,4 @@ O repositório do **backend** se encontra em: https://github.com/thiagola92/pucp
 - https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 - https://www.youtube.com/watch?v=pG9jvlNQzMU
 - https://www.w3schools.com/TagS/tag_template.asp
+- https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch#parameters

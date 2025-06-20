@@ -6,6 +6,7 @@ function loadFrame(path) {
     }
 
     indexFrame.height = 0
+    indexFrame.scrollHeight = 0
     indexFrame.src = PATHNAME.replace("/src/index.html", `/src/${path}`)
 }
 
@@ -13,12 +14,12 @@ function updateTopBar() {
     let token = sessionStorage.getItem("token")
 
     if (token == null || token.length == 0) {
-        addButton.hidden = true
+        listButton.hidden = true
         logoutButton.hidden = true
         registerButton.hidden = false
         loginButton.hidden = false
     } else {
-        addButton.hidden = false
+        listButton.hidden = false
         logoutButton.hidden = false
         registerButton.hidden = true
         loginButton.hidden = true
@@ -38,7 +39,7 @@ function onFrameMessage(event) {
 
     if (parts[0] == "frameHeight") {
         indexFrame.height = parseInt(parts[1])
-    } else if (parts[0] == "login") {
+    } else if (parts[0] == "token") {
         sessionStorage.setItem("token", parts[1])
         updateTopBar()
     }

@@ -1,0 +1,37 @@
+<head>
+    <link rel="stylesheet" href="css/pico/pico.min.css">
+    <link rel="stylesheet" href="css/list.css">
+
+    <script src="js/iframe.js">notifySize()</script>
+    <script src="js/list.js"></script>
+</head>
+
+<body>
+    <button class="add">Adicionar</button>
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Rua</th>
+                <th>Plano</th>
+                <th>Preço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="propertiesRows">
+        </tbody>
+    </table>
+</body>
+
+<hr>
+
+<template id="rowTemplate">
+    <tr>
+        <td class="street">R. Visconde</td>
+        <td class="plan">Alugar</td>
+        <td class="price">R$ 1000000,00</td>
+        <td>
+            <button class="edit" disabled>Editar</button>
+            <button class="delete">Deletar</button>
+        </td>
+    </tr>
+</template>

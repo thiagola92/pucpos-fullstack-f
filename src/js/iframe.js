@@ -1,11 +1,11 @@
 function requestResize() {
-    window.parent.postMessage(`frameHeight=${document.body.scrollHeight}`, "*")
-
-    // As vezes a mensagem chega antes da iframe calcular o tamanho real,
-    // então mandar novamente não faz mal.
+    // É incrivelmente chato lidar com as pequenas diferenças
+    // de Firefox e Chrome sobre quando cade um decide calcular
+    // o tamanho da iframe...
+    // Escolhi por só botar um delay grande.
     setTimeout(() => {
         window.parent.postMessage(`frameHeight=${document.body.scrollHeight}`, "*")
-    }, 500)
+    }, 250)
 }
 
 window.onload = requestResize

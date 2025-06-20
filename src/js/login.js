@@ -17,7 +17,7 @@ async function onSubmit(e) {
     let token = await response.text()
     
     sessionStorage.setItem("token", token)
-    window.parent.postMessage(`login=${token}`, "*")
+    window.parent.postMessage(`token=${token}`, "*")
 
     window.location.href = "./search.html"
 }
