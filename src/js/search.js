@@ -19,19 +19,24 @@ async function refreshProperties() {
     propertiesList.innerHTML = ""
 
     for (let i in properties) {
-        let clon = propertyTemplate.content.cloneNode(true)
-
-        let img = clon.querySelector(".cardImage")
         let photo = properties[i]["photo"]
-
-        let text = clon.querySelector(".cardText")
         let price = properties[i]["price"].toString()
         let street = properties[i]["address"]["street"]
+        let plan = properties[i]["plan"]
         let real = price.slice(0, price.length - 2)
         let cents = price.slice(price.length - 2)
 
-        img.src = `./images/search/${photo}`
-        text.innerHTML = `R$ ${real},${cents}<br>${street}`
+        let clon = propertyTemplate.content.cloneNode(true)
+        let imgElement = clon.querySelector(".cardImage")
+        let textElement = clon.querySelector(".cardText")
+        let priceElement = textElement.querySelector(".cardPrice")
+        let streetElement = textElement.querySelector(".cardStreet")
+        let planElement = textElement.querySelector(".cardPlan")
+
+        imgElement.src = `./images/search/${photo}`
+        priceElement.innerText = `R$ ${real},${cents}`
+        streetElement.innerText = `${street}`
+        planElement.innerText = `${plan}`
 
         propertiesList.appendChild(clon)
     }
