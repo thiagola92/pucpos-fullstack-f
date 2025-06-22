@@ -3,6 +3,22 @@ async function onAddClick() {
 }
 
 async function onDeleteClick(property_id) {
+    let response = await fetch("http://127.0.0.1:5000/property", {
+        method: "DELETE",
+        headers: {
+            "token": sessionStorage.getItem("token"),
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            "id": property_id,
+        })
+    })
+
+    if (!response.ok) {
+        window.location.href = "./error.html"
+        return []
+    }
+
     await refreshList()
 }
 
@@ -32,6 +48,7 @@ async function refreshList() {
         let streetNode = clon.querySelector(".street")
         let planNode = clon.querySelector(".plan")
         let priceNode = clon.querySelector(".price")
+        let deleteNode = clon.querySelector(".delete")
 
         let price = properties[i]["price"].toString()
         let plan = properties[i]["plan"]
@@ -42,6 +59,7 @@ async function refreshList() {
         streetNode.innerText = street
         planNode.innerText = plan
         priceNode.innerText = `R$ ${real},${cents}`
+        deleteNode.onclick = () => {onDeleteClick(properties[i].id)}
 
         propertiesRows.appendChild(clon)
     }
