@@ -10,7 +10,7 @@ async function onSubmit(e) {
         body: JSON.stringify({
             "street": streetField.value,
             "price": priceField.value,
-            "plan": planField0.checked ? "Vender" : "Alugar",
+            "plan_id": planField1.checked ? 1 : 2,
         })
     })
 

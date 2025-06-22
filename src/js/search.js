@@ -22,7 +22,7 @@ async function refreshProperties() {
         let photo = properties[i]["photo"]
         let price = properties[i]["price"].toString()
         let street = properties[i]["address"]["street"]
-        let plan = properties[i]["plan"]
+        let plan = properties[i]["plan"]["action"]
         let real = price.slice(0, price.length - 2)
         let cents = price.slice(price.length - 2)
 

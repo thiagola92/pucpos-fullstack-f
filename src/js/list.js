@@ -51,7 +51,7 @@ async function refreshList() {
         let deleteNode = clon.querySelector(".delete")
 
         let price = properties[i]["price"].toString()
-        let plan = properties[i]["plan"]
+        let plan = properties[i]["plan"]["action"]
         let street = properties[i]["address"]["street"]
         let real = price.slice(0, price.length - 2)
         let cents = price.slice(price.length - 2)
