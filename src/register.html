@@ -6,36 +6,38 @@
     <script src="js/register.js"></script>
 </head>
 
-<form id="registration" class="container">
-    <label>
-        Nome completo
-        <input type="text" id="nameField">
-    </label>
-    <div class="grid">
+<body>
+    <form id="registration" class="container">
         <label>
-            CPF
-            <input type="text" id="cpfField">
+            Nome completo
+            <input type="text" id="nameField">
+        </label>
+        <div class="grid">
+            <label>
+                CPF
+                <input type="text" id="cpfField">
+            </label>
+            <label>
+                Telefone
+                <input type="tel" id="phoneField">
+            </label>
+        </div>
+        <label>
+            E-mail
+            <input type="email" id="emailField">
         </label>
         <label>
-            Telefone
-            <input type="tel" id="phoneField">
+            Senha
+            <input type="password" id="passwordField">
         </label>
-    </div>
-    <label>
-        E-mail
-        <input type="email" id="emailField">
-    </label>
-    <label>
-        Senha
-        <input type="password" id="passwordField">
-    </label>
-    <label>
-        Confirme a senha
-        <input type="password">
-    </label>
-    <label>
-        <input type="checkbox" role="switch">
-        Eu li e concordo com os termos de uso
-    </label>
-    <button class="container-fluid">Registar</button>
-</form>
+        <label>
+            Confirme a senha
+            <input type="password">
+        </label>
+        <label>
+            <input type="checkbox" role="switch">
+            Eu li e concordo com os termos de uso
+        </label>
+        <button class="container-fluid">Registar</button>
+    </form>
+</body>

@@ -1,3 +1,7 @@
+body {
+    margin: 4px;
+}
+
 #login {
     max-width: 500px;
 }

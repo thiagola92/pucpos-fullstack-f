@@ -1,5 +1,5 @@
 async function onAddClick() {
-    await refreshList()
+    window.location.href = "./add.html"
 }
 
 async function onDeleteClick(property_id) {
@@ -9,10 +9,9 @@ async function onDeleteClick(property_id) {
 async function refreshList() {
     let url = new URL("http://127.0.0.1:5000/properties")
 
-    // Zero means that you want your account properties
+    // Zero quer dizer sua conta.
     url.searchParams.append("account_id", 0)
     
-    console.log(sessionStorage.getItem("token"))
     let response = await fetch(url.href, {
         headers: {
             "token": sessionStorage.getItem("token"),
