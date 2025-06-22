@@ -5,11 +5,19 @@ async function onSubmit(e) {
         method: "POST",
         headers: {
             "token": sessionStorage.getItem("token"),
+            "Content-Type": "application/json",
         },
-        body: {
-            
-        }
+        body: JSON.stringify({
+            "street": streetField.value,
+            "price": priceField.value,
+            "plan": planField0.checked ? "Vender" : "Alugar",
+        })
     })
+
+    if (!response.ok) {
+        window.location.href = "./error.html"
+        return []
+    }
 
     window.location.href = "./list.html"
 }
