@@ -5,7 +5,17 @@ async function onSubmit(e) {
 }
 
 async function refreshProperties() {
+    let planBit = 0
+    planBit += buyField.checked ? 1 : 0
+    planBit += rentField.checked ? 2 : 0
+
+    let typeBit = 0
+    typeBit += houseField.checked ? 1 : 0
+    typeBit += flatField.checked ? 2 : 0
+
     let url = new URL("http://127.0.0.1:5000/properties")
+    url.searchParams.append("plan", planBit)
+    url.searchParams.append("type", typeBit)
     url.searchParams.append("street", searchField.value)
     
     let response = await fetch(url.href)
