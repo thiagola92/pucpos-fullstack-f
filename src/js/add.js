@@ -11,6 +11,7 @@ async function onSubmit(e) {
             "street": streetField.value,
             "price": priceField.value,
             "plan_id": planField1.checked ? 1 : 2,
+            "type_id": typeField1.checked ? 1 : 2,
         })
     })
 
