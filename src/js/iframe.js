@@ -5,6 +5,7 @@ function requestResize() {
     // Escolhi por só botar um delay grande.
     setTimeout(() => {
         window.parent.postMessage(`frameHeight=${document.body.scrollHeight}`, "*")
+        console.log("Fire", document.body.scrollHeight)
     }, 250)
 }
 

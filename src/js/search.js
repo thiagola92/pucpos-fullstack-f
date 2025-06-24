@@ -44,7 +44,7 @@ async function refreshProperties() {
         let planNode = textNode.querySelector(".cardPlan")
 
         imgNode.src = `./images/search/${photo}`
-        priceNode.innerText = `R$ ${real},${cents}`
+        priceNode.innerText = `R$ ${real}.${cents}`
         streetNode.innerText = `${street}`
         planNode.innerText = `${plan}`
 

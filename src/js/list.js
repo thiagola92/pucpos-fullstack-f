@@ -58,7 +58,7 @@ async function refreshList() {
 
         streetNode.innerText = street
         planNode.innerText = plan
-        priceNode.innerText = `R$ ${real},${cents}`
+        priceNode.innerText = `R$ ${real}.${cents}`
         deleteNode.onclick = () => {onDeleteClick(properties[i].id)}
 
         propertiesRows.appendChild(clon)
