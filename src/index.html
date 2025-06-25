@@ -9,8 +9,13 @@
 <body class="container-fluid">
     <nav>
         <ul>
-            <li><img class="logo" src="images/index/logo.svg" width="50px" height="50px"
-                    onclick="loadFrame('search.html')"></li>
+            <li>
+                <img class="logo" src="images/index/logo.svg" width="50px" height="50px"
+                    onclick="loadFrame('search.html')">
+            </li>
+            <li id="searchButton">
+                <button onclick="loadFrame('search.html')">Busque imóveis</button>
+            </li>
         </ul>
         <ul>
             <li id="listButton" hidden>
