@@ -23,7 +23,7 @@ O projeto é divido em diversos arquivos (HTML, CSS e JS) para evitar monólito,
 
 Originalmente, seria utilizado `fetch()` para carregar os outros arquivos conforme o necessário, porém navegadores consideram [CORS](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy#file_origins) se você não estiver hosteando um server (`python -m http.server`).  
 
-Para solucionar isto, foi utilizado `<iframe>` pois ainda podemos atualiza-lo dinâmicamente conforme o necessário.  
+Para solucionar isto, foi utilizado `<iframe>` pois podemos atualiza-lo dinâmicamente conforme o necessário (embora seja uma solução feia 🤮).  
 
 # Referências
 - https://developer.mozilla.org/en-US/docs/Web/API/Location
