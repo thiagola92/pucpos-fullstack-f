@@ -33,6 +33,7 @@ async function refreshProperties() {
         let price = properties[i]["price"].toString()
         let street = properties[i]["address"]["street"]
         let plan = properties[i]["plan"]["action"]
+        let type = properties[i]["type"]["name"]
         let real = price.slice(0, price.length - 2)
         let cents = price.slice(price.length - 2)
 
@@ -42,11 +43,13 @@ async function refreshProperties() {
         let priceNode = textNode.querySelector(".cardPrice")
         let streetNode = textNode.querySelector(".cardStreet")
         let planNode = textNode.querySelector(".cardPlan")
+        let typeNode = textNode.querySelector(".cardType")
 
         imgNode.src = `./images/search/${photo}`
         priceNode.innerText = `R$ ${real}.${cents}`
         streetNode.innerText = `${street}`
         planNode.innerText = `${plan}`
+        typeNode.innerText = `${type}`
 
         propertiesList.appendChild(clon)
     }
