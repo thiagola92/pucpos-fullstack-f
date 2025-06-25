@@ -35,3 +35,4 @@ Para solucionar isto, foi utilizado `<iframe>` pois ainda podemos atualiza-lo di
 - https://www.w3schools.com/TagS/tag_template.asp
 - https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch#parameters
 - https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy#file_origins
+- https://martinfowler.com/articles/micro-frontends.html
