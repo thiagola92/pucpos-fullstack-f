@@ -47,17 +47,20 @@ async function refreshList() {
 
         let streetNode = clon.querySelector(".street")
         let planNode = clon.querySelector(".plan")
+        let typeNode = clon.querySelector(".type")
         let priceNode = clon.querySelector(".price")
         let deleteNode = clon.querySelector(".delete")
 
         let price = properties[i]["price"].toString()
         let plan = properties[i]["plan"]["action"]
+        let type = properties[i]["type"]["name"]
         let street = properties[i]["address"]["street"]
         let real = price.slice(0, price.length - 2)
         let cents = price.slice(price.length - 2)
 
         streetNode.innerText = street
         planNode.innerText = plan
+        typeNode.innerText = type
         priceNode.innerText = `R$ ${real}.${cents}`
         deleteNode.onclick = () => {onDeleteClick(properties[i].id)}
 
