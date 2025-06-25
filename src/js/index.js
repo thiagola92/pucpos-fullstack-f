@@ -1,13 +1,16 @@
 const PATHNAME = window.location.pathname
 
 function loadFrame(path) {
-    if (window.location.protocol != "file:") {
-        return console.error("Este website foi feito para uso local apenas.")
+    if (window.location.protocol == "file:") {
+        // Caso tenha aberto o arquivo HTML.
+        indexFrame.src = PATHNAME.replace("/src/index.html", `/src/${path}`)
+    } else {
+        // Caso tenha levantado servido com "python -m http.server".
+        indexFrame.src = path
     }
 
-    indexFrame.height = 0
-    indexFrame.scrollHeight = 0
-    indexFrame.src = PATHNAME.replace("/src/index.html", `/src/${path}`)
+    indexFrame.height = 0 // Força o resize após trocar o source.
+    loadingBar.style["visibility"] = "visible"
 }
 
 function updateTopBar() {
@@ -39,6 +42,7 @@ function onFrameMessage(event) {
 
     if (parts[0] == "frameHeight") {
         indexFrame.height = parseInt(parts[1])
+        loadingBar.style["visibility"] = "collapse"
     } else if (parts[0] == "token") {
         sessionStorage.setItem("token", parts[1])
         updateTopBar()
@@ -48,6 +52,12 @@ function onFrameMessage(event) {
 
 function onWindowLoad() {
     updateTopBar()
+
+    loadingBar.style["visibility"] = "collapse"
+}
+
+function onWindowResize() {
+    indexFrame.height = 0
 }
 
 function onLogoutClicked() {
@@ -59,3 +69,4 @@ function onLogoutClicked() {
 window.addEventListener("message", onFrameMessage)
 
 window.onload = onWindowLoad
+window.onresize = onWindowResize
