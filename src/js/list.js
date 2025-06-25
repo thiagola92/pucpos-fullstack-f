@@ -2,6 +2,13 @@ async function onAddClick() {
     window.location.href = "./add.html"
 }
 
+async function onEditClick(id) {
+    let params = new URLSearchParams()
+    params.append("id", id)
+
+    window.location.href = `./edit.html?${params.toString()}`
+}
+
 async function onDeleteClick(property_id) {
     let response = await fetch("http://127.0.0.1:5000/property", {
         method: "DELETE",
@@ -49,6 +56,7 @@ async function refreshList() {
         let planNode = clon.querySelector(".plan")
         let typeNode = clon.querySelector(".type")
         let priceNode = clon.querySelector(".price")
+        let editNode = clon.querySelector(".edit")
         let deleteNode = clon.querySelector(".delete")
 
         let price = properties[i]["price"].toString()
@@ -62,6 +70,7 @@ async function refreshList() {
         planNode.innerText = plan
         typeNode.innerText = type
         priceNode.innerText = `R$ ${real}.${cents}`
+        editNode.onclick = () => {onEditClick(properties[i].id)}
         deleteNode.onclick = () => {onDeleteClick(properties[i].id)}
 
         propertiesRows.appendChild(clon)
