@@ -14,6 +14,7 @@ async function refreshProperties() {
     typeBit += flatField.checked ? 2 : 0
 
     let url = new URL("http://127.0.0.1:5000/properties")
+    url.searchParams.append("account_id", -1)
     url.searchParams.append("plan", planBit)
     url.searchParams.append("type", typeBit)
     url.searchParams.append("street", searchField.value)
